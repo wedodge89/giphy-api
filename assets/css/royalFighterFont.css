@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Royal Fighter';
+    src: url('../transfonter.org-20191026-151736/RoyalFighter.woff2') format('woff2'),
+        url('../transfonter.org-20191026-151736/RoyalFighter.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
