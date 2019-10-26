@@ -21,7 +21,7 @@ $(document).ready(function() {
 
     // When one of the GIF buttons is clicked, use AJAX to search Giphy for top 10 gifs tagged with that term
     $(document.body).on("click", ".gifButton", function() {
-        $("#gifDivDiv").empty()
+        $("#gifDisplay").empty()
         let query = $(this).val();
         const queryURL = "https://api.giphy.com/v1/gifs/search?api_key=yQZnEQW0eMlyNZ4WYRZhN5QZcREtbMTp&q=" + query + "&limit=10&offset=0&rating=G&lang=en"
         $.ajax({
@@ -45,7 +45,7 @@ $(document).ready(function() {
                 animeGif.attr("data-animate", animated)
                 gifDiv.prepend(p);
                 gifDiv.prepend(animeGif);
-                $("#gifDivDiv").prepend(gifDiv);
+                $("#gifDisplay").prepend(gifDiv);
             }});
         })
 
