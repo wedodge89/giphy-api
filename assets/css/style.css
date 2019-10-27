@@ -2,4 +2,44 @@ h1 {
     font-family: "Royal Fighter";
     font-size: 48px;
     color: red;
+    text-align: center;
+    margin: 20px;
+}
+
+body {
+    background-color: black;
+}
+
+.gifButton {
+    margin: 5px;
+    font-size: 14px;
+}
+
+#buttonDiv {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    }
+
+#giphy-form {
+    background-color: white;
+    margin: 15px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#show-input {
+    font-size: 20px;
+}
+
+#submit-button {
+    font-size: 20px;
+}
+
+#gifDisplay {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    width: 30vw;
+    margin: 15px;
 }

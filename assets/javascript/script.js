@@ -23,7 +23,7 @@ $(document).ready(function() {
     $(document.body).on("click", ".gifButton", function() {
         $("#gifDisplay").empty()
         let query = $(this).val();
-        const queryURL = "https://api.giphy.com/v1/gifs/search?api_key=yQZnEQW0eMlyNZ4WYRZhN5QZcREtbMTp&q=" + query + "&limit=10&offset=0&rating=G&lang=en"
+        const queryURL = "https://api.giphy.com/v1/gifs/search?api_key=yQZnEQW0eMlyNZ4WYRZhN5QZcREtbMTp&q=" + query + "&limit=10&offset=0&rating=pg&lang=en"
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -34,6 +34,7 @@ $(document).ready(function() {
             for (var i = 0; i < results.length; i++) {
                 let gifDiv = $("<div>");
                 let rating = results[i].rating;
+                    rating = rating.toUpperCase()
                 let p = $("<p>").text(`Rating: ${rating}`);
                 let animeGif = $("<img>");
                 let animated = results[i].images.fixed_height.url;
@@ -45,6 +46,7 @@ $(document).ready(function() {
                 animeGif.attr("data-animate", animated)
                 gifDiv.prepend(p);
                 gifDiv.prepend(animeGif);
+                gifDiv.append('<hr>')
                 $("#gifDisplay").prepend(gifDiv);
             }});
         })
