@@ -1,4 +1,4 @@
-# giphy-api-homework
+# Giphy API
 A web application that uses both pre-coded and user-generated buttons to get a variety of relevant animated gifs from the giphy API
 
 The application functions in 5 basic steps.
